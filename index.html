@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090909">
+  <meta name="description" content="Augke, filmmaker and videographer from Rotterdam.">
+  <title>AUGKE® | Filmmaker</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #090909;
+      color: #f5f5f5;
+      font-family: 'DM Sans', sans-serif;
+      min-height: 100vh;
+      padding: 28px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 430px;
+      text-align: center;
+    }
+
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #777;
+      font-size: 10px;
+      letter-spacing: 2px;
+      margin-bottom: 64px;
+    }
+
+    .status {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .dot {
+      height: 6px;
+      width: 6px;
+      background: #b5f58a;
+      border-radius: 50%;
+    }
+
+    .logo {
+      width: 86px;
+      height: 86px;
+      margin: 0 auto 23px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #393939;
+      border-radius: 50%;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 35px;
+      font-weight: 700;
+      letter-spacing: -4px;
+    }
+
+    h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 38px;
+      letter-spacing: 5px;
+      font-weight: 600;
+    }
+
+    .subtitle {
+      margin-top: 12px;
+      color: #888;
+      font-size: 11px;
+      letter-spacing: 2px;
+    }
+
+    .intro {
+      margin: 22px auto 35px;
+      color: #aaa;
+      font-size: 14px;
+      line-height: 1.8;
+      max-width: 310px;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+    }
+
+    .link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      text-decoration: none;
+      color: #f5f5f5;
+      border: 1px solid #303030;
+      background: #111;
+      border-radius: 5px;
+      padding: 19px 18px;
+      transition: background 0.2s, border-color 0.2s,
+                  transform 0.2s;
+    }
+
+    .link:hover {
+      background: #1c1c1c;
+      border-color: #777;
+      transform: translateY(-2px);
+    }
+
+    .link-title {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+    }
+
+    .arrow {
+      color: #888;
+      font-size: 19px;
+    }
+
+    .footer {
+      margin-top: 54px;
+      color: #555;
+      font-size: 10px;
+      letter-spacing: 2px;
+    }
+
+    @media (max-width: 480px) {
+      .top {
+        margin-bottom: 52px;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <div class="top">
+      <span>ROTTERDAM, NL</span>
+      <span class="status">
+        <span class="dot"></span>
+        FILMMAKER
+      </span>
+    </div>
+
+    <header>
+      <div class="logo">A.</div>
+      <h1>AUGKE<span style="color:#666">®</span></h1>
+      <p class="subtitle">FILMMAKER / VIDEOGRAPHER</p>
+      <p class="intro">
+        Capturing moments, creating stories.<br>
+        Film and visual work by Augke.
+      </p>
+    </header>
+
+    <nav class="links" aria-label="My links">
+      <a class="link" href="https://www.instagram.com/4ugk3/" target="_blank" rel="noopener noreferrer">
+        <span class="link-title">INSTAGRAM</span>
+        <span class="arrow">↗</span>
+      </a>
+
+      <a class="link" href="https://www.tiktok.com/@augke" target="_blank" rel="noopener noreferrer">
+        <span class="link-title">TIKTOK</span>
+        <span class="arrow">↗</span>
+      </a>
+
+      <a class="link" href="https://www.youtube.com/@augke" target="_blank" rel="noopener noreferrer">
+        <span class="link-title">YOUTUBE</span>
+        <span class="arrow">↗</span>
+      </a>
+    </nav>
+
+    <footer class="footer">
+      AUGKE® · INDEPENDENT FILMMAKER
+    </footer>
+  </main>
+</body>
+</html>
