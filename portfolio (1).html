@@ -1,0 +1,111 @@
+<!doctype html><html lang="nl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#000000">
+<link rel="canonical" href="https://augke.com/portfolio.html">
+<link rel="icon" href="favicon.ico" sizes="48x48"><link rel="icon" type="image/png" href="favicon-512.png" sizes="512x512"><link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800&family=Big+Shoulders+Display:wght@800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<title>Augke</title>
+<meta name="description" content="Concertfilms, muziekvideo's en club- en eventvideo's van Augke.">
+</head><body>
+<header><div class="wrap"><a class="logo" href="index.html" aria-label="Augke, naar home"><img src="logo.png" alt="Augke"></a><nav aria-label="Hoofdmenu"><a href="index.html">Home</a><a href="portfolio.html" aria-current="page">Portfolio</a><a href="contact.html">Contact</a></nav></div></header>
+<main class="wrap">
+<h1 class="page-title">Portfolio</h1>
+<nav class="jump" aria-label="Categorieën"><a href="#concerts"><b>1</b>Concerts</a><a href="#videos"><b>2</b>Music videos</a><a href="#events"><b>3</b>Clubs / events</a><a href="#reels"><b>4</b>All reels</a></nav>
+<section class="cat" id="concerts"><div class="cat-head"><span class="num" aria-hidden="true">1</span><h2>Concerts</h2><span class="count" id="c1"></span></div><div class="grid" id="g1"></div></section>
+<section class="cat" id="videos"><div class="cat-head"><span class="num" aria-hidden="true">2</span><h2>Music videos</h2><span class="count" id="c2"></span></div><div class="grid" id="g2"></div></section>
+<section class="cat" id="events"><div class="cat-head"><span class="num" aria-hidden="true">3</span><h2>Clubs / events</h2><span class="count" id="c3"></span></div><div class="grid" id="g3"></div></section>
+<section class="cat" id="reels"><div class="cat-head"><span class="num" aria-hidden="true">4</span><h2>All reels</h2><span class="count" id="c4"></span></div><p class="sub">Filmed, edited and colour graded</p><div id="g4"></div></section>
+<section class="tt" id="tiktoks">
+<h2>TikToks</h2>
+<p>260K+ likes. Alles gefilmd, gemonteerd en colour graded door Augke.</p>
+<ul id="tt"></ul>
+</section>
+</main>
+<footer><div class="wrap">© 2026 Augke. Videographer &amp; filmmaker, Rotterdam.</div></footer>
+<script>
+// [categorie, titel, credits, link]. Voeg hier nieuw werk toe.
+var IG="https://www.instagram.com/reel/",YT="https://youtu.be/";
+var W=[
+["Concerts","Young Thug | YSL: The New Generation Tour","Filmed, Colour Graded",""],
+["Concerts","Fakemink | Paradiso","Filmed, Edited, Colour Graded",IG+"DaNbHr0t7GU/"],
+["Concerts","Nine Vicious | Melkweg","Co-Filmed, Co-Edited, Colour Graded",IG+"Da0U3oPNhVm/"],
+["Concerts","OsamaSon | 013 Tilburg","Filmed, Colour Graded",IG+"Dd1jTzutSFD/"],
+["Concerts","RAGEFEST | 013 Tilburg","Filmed, Edited, Colour Graded. Met Xaviersobased, Sinn6r, Djrennessey, Ksuuvi, Lostboyshawty, Iliasopdebeat en meer.",IG+"Dax72-_tk3x/"],
+["Concerts","Slayr | Midline Miami","Filmed, Colour Graded",IG+"DcZFgsctqqa/"],
+["Concerts","Che | Melkweg","Filmed, Colour Graded, Co-Edited",IG+"Dak4edytU2x/"],
+["Concerts","Feng | Tolhuistuin","Filmed, Colour Graded",IG+"DdeXn4NN7On/"],
+["Concerts","Sinn6r | Bitterzoet","Filmed, Edited, Colour Graded",IG+"DWzKYw5jeC3/"],
+["Concerts","Rico Ace | Q-Factory","Filmed, Colour Graded",IG+"DdHHfgmtZG6/"],
+["Concerts","Swapa | Miami","Filmed, Colour Graded",IG+"Dc06JW2Ny98/"],
+["Concerts","1300saint | AFAS Live","Filmed, Edited, Colour Graded",IG+"Deo-cJkN0Tf/"],
+["Concerts","Diamond* | AFAS Live","Filmed, Edited, Colour Graded",IG+"Dewz5ent4Rp/"],
+["Music videos","Lil Timmie - Atoombom","Directed, Filmed, Edited, Colour Graded",YT+"GVXdDCLviYc"],
+["Music videos","Reez - Walk Scheef","Directed, Filmed, Edited, Colour Graded",YT+"2vnBy0Tx804"],
+["Music videos","Alca - Lipliner","Filmed, Colour Graded",YT+"n1-ICtT86Mk"],
+["Music videos","J4yson - Jongen van C","Directed, Filmed, Edited, Colour Graded",YT+"EmkubFOom0Y"],
+["Music videos","Moesti - Eastsidestory","Directed, Filmed, Edited, Colour Graded",YT+"Q7oSZ_pR8wA"],
+["Music videos","Lukaongo - Vett","Directed, Filmed, Edited, Colour Graded",IG+"DRSCiHyDS1V/"],
+["Music videos","J4yson - Limbo","Directed, Filmed, Edited, Colour Graded",YT+"fjdpBxkMUBo"],
+["Music videos","Marrgiela - Gestoort","Directed, Filmed, Edited",IG+"DO0huABjedv/"],
+["Music videos","Lukaongo - Happy Birthday","Directed, Filmed, Edited, Colour Graded",IG+"DOeRxT_Dbz0/"],
+["Clubs / events","Royal Rumble","Filmed, Edited, Colour Graded. Met Sor, Kaya Imani, Qlas, gpuitg, Lusho, Rijck, Lostboyshawty, Bokoedro, Kenrae, Brokezart, Skye Indy, Brunzyn en meer.",IG+"DXy7zuFtPZ_/"],
+["Clubs / events","Wakeupfilthy met Lostboyshawty en Bokoedro | Superdisco","Filmed, Edited, Colour Graded",IG+"DWZxSayjXwf/"],
+["Clubs / events","Lostboyshawty | SMIB ADE","Filmed, Edited, Colour Graded",IG+"DQWwT8iDUJ3/"],
+["Clubs / events","Sidequest | 2nd Anniversary","Filmed, Edited, Colour Graded",IG+"DY2D0rRtaBY/"],
+["Clubs / events","Sidequest | 5th Edition","Filmed, Edited, Colour Graded",IG+"DPWRwkoCHW9/"],
+["Clubs / events","Royal Rumble | 3rd Edition Official Aftermovie","Co-Filmed",IG+"DYC5_0tMJD9/"],
+["Clubs / events","The Style Society | MONO","Filmed, Edited, Colour Graded",IG+"DN0Xw4BWgCc/"]
+];
+var T=["7643766719411916064","7610116289113165089","7620807237388274976","7564396432166522145","7560290116162325792","7604826582640807200","7625230573405031713"];
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/"/g,"&quot;")}
+// Thumbnail: YouTube haalt zichzelf op. Instagram: zet een plaatje in thumbs/<reel-id>.jpg
+function thumb(u){
+ var y=u.match(/youtu\.be\/([\w-]+)/);if(y)return "https://img.youtube.com/vi/"+y[1]+"/hqdefault.jpg";
+ var i=u.match(/\/reel\/([\w-]+)/);if(i)return "thumbs/"+i[1]+".jpg";return "";
+}
+var C=[["Concerts","g1","c1"],["Music videos","g2","c2"],["Clubs / events","g3","c3"]];
+function card(w,n){
+ var t=thumb(w[3]),yt=w[3].indexOf("youtu.be/")>-1;
+ var label=w[3]?esc(w[1]):"Video komt eraan";
+ var img=t?'<img loading="lazy" alt="" src="'+t+'" onerror="this.remove()">':'';
+ var inner='<div class="frame'+(w[3]?'':' soon')+'"><span class="badge" aria-hidden="true">'+n+'</span><span>'+label+'</span>'+img+'</div><div class="info"><h3>'+esc(w[1])+'</h3><p>'+esc(w[2])+'</p>'+(w[3]?'<span class="go">Bekijk video op '+(yt?'YouTube':'Instagram')+'</span>':'')+'</div>';
+ return w[3]?'<a class="card" href="'+w[3]+'" target="_blank" rel="noopener">'+inner+'</a>':'<div class="card">'+inner+'</div>';
+}
+C.forEach(function(c,i){
+ var l=W.filter(function(w){return w[0]===c[0]});
+ document.getElementById(c[1]).innerHTML=l.map(function(w){return card(w,i+1)}).join("");
+ document.getElementById(c[2]).textContent=l.length+" video's";
+});
+var R=[
+["Mellow Rackz x NBA (Never Broke Again)","ig","DdmiwVBBwJg"],
+["Moesti","ig","DeUKTMvI3FA"],
+["Moesti","tt","7676555065582292257","moesti2905"],
+["Moesti","tt","7679171749199514913","moesti2905"],
+["Moesti","tt","7679795851086073120","moesti2905"],
+["Moesti","tt","7680229056918359329","moesti2905"],
+["Moesti","tt","7675436861774400800","moesti2905"],
+["Ragey","ig","DfAdC14tuXo"],
+["Ragey","ig","DQ6ltfbjaWG"],
+["J4yson","tt","7634938982907907361","j4ysonmusic"]
+];
+// All reels: thumbnail in thumbs/<id>.jpg (id = reel- of videonummer)
+function ru(r){return r[1]==="ig"?"https://www.instagram.com/reel/"+r[2]+"/":"https://www.tiktok.com/@"+r[3]+"/video/"+r[2]}
+(function(){
+ var names=[];R.forEach(function(r){if(names.indexOf(r[0])<0)names.push(r[0])});
+ document.getElementById("g4").innerHTML=names.map(function(n){
+  var l=R.filter(function(r){return r[0]===n});
+  var cards=l.map(function(r,i){
+   var p=r[1]==="ig"?"Instagram":"TikTok";
+   var same=l.filter(function(x,j){return x[1]===r[1]});
+   var nr=l.filter(function(x,j){return x[1]===r[1]&&j<=i}).length;
+   var title=l.length>1?n+" ("+p+(same.length>1?" "+nr:"")+")":n;
+   return '<a class="card" href="'+ru(r)+'" target="_blank" rel="noopener"><div class="frame"><span class="badge" aria-hidden="true">4</span><span>'+esc(title)+'</span><img loading="lazy" alt="" src="thumbs/'+r[2]+'.jpg" onerror="this.remove()"></div><div class="info"><h3>'+esc(title)+'</h3><p>Filmed, edited and colour graded</p><span class="go">Bekijk op '+p+'</span></div></a>';
+  }).join("");
+  return '<h3 class="artist">'+esc(n)+'<small>'+l.length+(l.length>1?" reels":" reel")+'</small></h3><div class="grid">'+cards+'</div>';
+ }).join("");
+ document.getElementById("c4").textContent=R.length+" reels";
+})();
+document.getElementById("tt").innerHTML=T.map(function(id,i){return '<li><a href="https://www.tiktok.com/@augke/video/'+id+'" target="_blank" rel="noopener">TikTok '+(i+1)+'</a></li>'}).join("");
+</script>
+</body></html>
