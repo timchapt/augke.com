@@ -25,6 +25,7 @@
 </main>
 <footer><div class="wrap">© 2026 Augke. Videographer &amp; filmmaker, Rotterdam.</div></footer>
 <script>
+function tf(i){if(!i.dataset.f){i.dataset.f=1;i.src=i.src.replace("thumbs/","")}else{i.remove()}}
 // [category, title, credits, link]. Add new work here.
 var IG="https://www.instagram.com/reel/",YT="https://youtu.be/";
 var W=[
@@ -69,7 +70,7 @@ var C=[["Concerts","g1","c1"],["Music videos","g2","c2"],["Clubs / events","g3",
 function card(w,n){
  var t=thumb(w[3]),yt=w[3].indexOf("youtu.be/")>-1;
  var label=w[3]?esc(w[1]):"Video coming soon";
- var img=t?'<img loading="lazy" alt="" src="'+t+'" onerror="this.remove()">':'';
+ var img=t?'<img loading="lazy" alt="" src="'+t+'" onerror="tf(this)">':'';
  var inner='<div class="frame'+(w[3]?'':' soon')+'"><span class="badge" aria-hidden="true">'+n+'</span><span>'+label+'</span>'+img+'</div><div class="info"><h3>'+esc(w[1])+'</h3><p>'+esc(w[2])+'</p>'+(w[3]?'<span class="go">Watch on '+(yt?'YouTube':'Instagram')+'</span>':'')+'</div>';
  return w[3]?'<a class="card" href="'+w[3]+'" target="_blank" rel="noopener">'+inner+'</a>':'<div class="card">'+inner+'</div>';
 }
@@ -101,17 +102,17 @@ function ru(r){return r[1]==="ig"?"https://www.instagram.com/reel/"+r[2]+"/":"ht
    var same=l.filter(function(x,j){return x[1]===r[1]});
    var nr=l.filter(function(x,j){return x[1]===r[1]&&j<=i}).length;
    var title=l.length>1?n+" ("+p+(same.length>1?" "+nr:"")+")":n;
-   return '<a class="card" href="'+ru(r)+'" target="_blank" rel="noopener"><div class="frame"><span class="badge" aria-hidden="true">4</span><span>'+esc(title)+'</span><img loading="lazy" alt="" src="thumbs/'+r[2]+'.jpg" onerror="this.remove()"></div><div class="info"><h3>'+esc(title)+'</h3><span class="go">Watch on '+p+'</span></div></a>';
+   return '<a class="card" href="'+ru(r)+'" target="_blank" rel="noopener"><div class="frame"><span class="badge" aria-hidden="true">4</span><span>'+esc(title)+'</span><img loading="lazy" alt="" src="thumbs/'+r[2]+'.jpg" onerror="tf(this)"></div><div class="info"><h3>'+esc(title)+'</h3><span class="go">Watch on '+p+'</span></div></a>';
   }).join("");
   return '<h3 class="artist">'+esc(n)+'<small>'+l.length+(l.length>1?" reels":" reel")+'</small></h3><div class="grid">'+cards+'</div>';
  }).join("");
  document.getElementById("c4").textContent=R.length+" reels";
 })();
 // Projects: [title, [lines under the title], link (empty = no link), thumbnail name in thumbs/, winner?]
-var P=[["WdKA 48 Hour Project 2026",["DOP, Assistant Editor, Colour Graded","Willem de Kooning Academy"],"","wdka-48-hour",true]];
+var P=[["WdKA 48 Hour Project 2026",["DOP, Assistant Editor, Colour Graded","Won at Willem de Kooning Academy"],"","wdka-48-hour",true]];
 (function(){
  document.getElementById("g5").innerHTML=P.map(function(p){
-  var inner='<div class="frame"><span class="badge" aria-hidden="true">5</span>'+(p[4]?'<span class="win">Winner</span>':'')+'<span>'+esc(p[0])+'</span><img loading="lazy" alt="" src="thumbs/'+p[3]+'.jpg" onerror="this.remove()"></div><div class="info"><h3>'+esc(p[0])+'</h3>'+p[1].map(function(x){return '<p class="full">'+esc(x)+'</p>'}).join("")+(p[2]?'<span class="go">View project</span>':'')+'</div>';
+  var inner='<div class="frame"><span class="badge" aria-hidden="true">5</span>'+(p[4]?'<span class="win">Won</span>':'')+'<span>'+esc(p[0])+'</span><img loading="lazy" alt="" src="thumbs/'+p[3]+'.jpg" onerror="tf(this)"></div><div class="info"><h3>'+esc(p[0])+'</h3>'+p[1].map(function(x){return '<p class="full">'+esc(x)+'</p>'}).join("")+(p[2]?'<span class="go">View project</span>':'')+'</div>';
   return p[2]?'<a class="card" href="'+p[2]+'" target="_blank" rel="noopener">'+inner+'</a>':'<div class="card">'+inner+'</div>';
  }).join("");
  document.getElementById("c5").textContent=P.length+(P.length>1?" projects":" project");

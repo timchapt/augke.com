@@ -147,3 +147,6 @@ footer{border-top:2px solid var(--w);padding:1.5rem 0;color:var(--g);font-size:.
 @media(max-width:760px){.frame span.win{font-size:.8rem;padding:.35rem .5rem}.info p.full{white-space:normal}}
 
 .info p.full{white-space:normal}
+
+/* keep side padding on the hero and about sections */
+.hero,.about{padding-left:1.5rem;padding-right:1.5rem}
