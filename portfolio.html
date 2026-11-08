@@ -1,4 +1,4 @@
-<!doctype html><html lang="nl"><head><meta charset="utf-8">
+<!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#000000">
 <link rel="canonical" href="https://augke.com/portfolio.html">
 <link rel="icon" href="favicon.ico?v=2" sizes="48x48"><link rel="icon" type="image/png" href="favicon-512.png?v=2" sizes="512x512"><link rel="apple-touch-icon" href="apple-touch-icon.png?v=2">
@@ -6,28 +6,29 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800&family=Big+Shoulders+Display:wght@800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <title>Augke</title>
-<meta name="description" content="Concertfilms, muziekvideo's en club- en eventvideo's van Augke.">
+<meta name="description" content="Concert films, music videos and club and event videos by Augke.">
 </head><body>
-<header><div class="wrap"><a class="logo" href="index.html" aria-label="Augke, naar home"><img src="logo.png" alt="Augke"></a><nav aria-label="Hoofdmenu"><a href="index.html">Home</a><a href="portfolio.html" aria-current="page">Portfolio</a><a href="contact.html">Contact</a></nav></div></header>
+<header><div class="wrap"><a class="logo" href="index.html" aria-label="Augke, go to home"><img src="logo.png" alt="Augke"></a><nav aria-label="Main menu"><a href="index.html">Home</a><a href="portfolio.html" aria-current="page">Portfolio</a><a href="contact.html">Contact</a></nav></div></header>
 <main class="wrap">
 <h1 class="page-title">Portfolio</h1>
-<nav class="jump" aria-label="Categorieën"><a href="#concerts"><b>1</b>Concerts</a><a href="#videos"><b>2</b>Music videos</a><a href="#events"><b>3</b>Clubs / events</a><a href="#reels"><b>4</b>Reels</a></nav>
+<nav class="jump" aria-label="Categories"><a href="#concerts"><b>1</b>Concerts</a><a href="#videos"><b>2</b>Music videos</a><a href="#events"><b>3</b>Clubs / events</a><a href="#reels"><b>4</b>Reels</a><a href="#projects"><b>5</b>Projects</a></nav>
 <section class="cat" id="concerts"><div class="cat-head"><span class="num" aria-hidden="true">1</span><h2>Concerts</h2><span class="count" id="c1"></span></div><div class="grid" id="g1"></div></section>
 <section class="cat" id="videos"><div class="cat-head"><span class="num" aria-hidden="true">2</span><h2>Music videos</h2><span class="count" id="c2"></span></div><div class="grid" id="g2"></div></section>
 <section class="cat" id="events"><div class="cat-head"><span class="num" aria-hidden="true">3</span><h2>Clubs / events</h2><span class="count" id="c3"></span></div><div class="grid" id="g3"></div></section>
 <section class="cat" id="reels"><div class="cat-head"><span class="num" aria-hidden="true">4</span><h2>Reels</h2><span class="count" id="c4"></span></div><p class="sub">Filmed, edited and colour graded</p><div id="g4"></div></section>
+<section class="cat" id="projects"><div class="cat-head"><span class="num" aria-hidden="true">5</span><h2>Projects</h2><span class="count" id="c5"></span></div><div class="grid" id="g5"></div></section>
 <section class="tt" id="tiktoks">
 <h2>TikToks</h2>
-<p>260K+ likes. Alles gefilmd, gemonteerd en colour graded door Augke.</p>
+<p>260K+ likes. All filmed, edited and colour graded by Augke.</p>
 <ul id="tt"></ul>
 </section>
 </main>
 <footer><div class="wrap">© 2026 Augke. Videographer &amp; filmmaker, Rotterdam.</div></footer>
 <script>
-// [categorie, titel, credits, link]. Voeg hier nieuw werk toe.
+// [category, title, credits, link]. Add new work here.
 var IG="https://www.instagram.com/reel/",YT="https://youtu.be/";
 var W=[
-["Concerts","Young Thug | YSL: The New Generation Tour","Filmed, Colour Graded",""],
+["Concerts","Young Thug | YSL: The New Generation Tour","Filmed, Colour Graded",IG+"DfcjcbWtoqG/"],
 ["Concerts","Fakemink | Paradiso","Filmed, Edited, Colour Graded",IG+"DaNbHr0t7GU/"],
 ["Concerts","Nine Vicious | Melkweg","Co-Filmed, Co-Edited, Colour Graded",IG+"Da0U3oPNhVm/"],
 ["Concerts","OsamaSon | 013 Tilburg","Filmed, Colour Graded",IG+"Dd1jTzutSFD/"],
@@ -59,7 +60,7 @@ var W=[
 ];
 var T=["7643766719411916064","7610116289113165089","7620807237388274976","7564396432166522145","7560290116162325792","7604826582640807200","7625230573405031713"];
 function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/"/g,"&quot;")}
-// Thumbnail: YouTube haalt zichzelf op. Instagram: zet een plaatje in thumbs/<reel-id>.jpg
+// Thumbnail: YouTube fetches its own. Instagram: put an image in thumbs/<reel-id>.jpg
 function thumb(u){
  var y=u.match(/youtu\.be\/([\w-]+)/);if(y)return "https://img.youtube.com/vi/"+y[1]+"/hqdefault.jpg";
  var i=u.match(/\/reel\/([\w-]+)/);if(i)return "thumbs/"+i[1]+".jpg";return "";
@@ -67,15 +68,15 @@ function thumb(u){
 var C=[["Concerts","g1","c1"],["Music videos","g2","c2"],["Clubs / events","g3","c3"]];
 function card(w,n){
  var t=thumb(w[3]),yt=w[3].indexOf("youtu.be/")>-1;
- var label=w[3]?esc(w[1]):"Video komt eraan";
+ var label=w[3]?esc(w[1]):"Video coming soon";
  var img=t?'<img loading="lazy" alt="" src="'+t+'" onerror="this.remove()">':'';
- var inner='<div class="frame'+(w[3]?'':' soon')+'"><span class="badge" aria-hidden="true">'+n+'</span><span>'+label+'</span>'+img+'</div><div class="info"><h3>'+esc(w[1])+'</h3><p>'+esc(w[2])+'</p>'+(w[3]?'<span class="go">Bekijk video op '+(yt?'YouTube':'Instagram')+'</span>':'')+'</div>';
+ var inner='<div class="frame'+(w[3]?'':' soon')+'"><span class="badge" aria-hidden="true">'+n+'</span><span>'+label+'</span>'+img+'</div><div class="info"><h3>'+esc(w[1])+'</h3><p>'+esc(w[2])+'</p>'+(w[3]?'<span class="go">Watch on '+(yt?'YouTube':'Instagram')+'</span>':'')+'</div>';
  return w[3]?'<a class="card" href="'+w[3]+'" target="_blank" rel="noopener">'+inner+'</a>':'<div class="card">'+inner+'</div>';
 }
 C.forEach(function(c,i){
  var l=W.filter(function(w){return w[0]===c[0]});
  document.getElementById(c[1]).innerHTML=l.map(function(w){return card(w,i+1)}).join("");
- document.getElementById(c[2]).textContent=l.length+" video's";
+ document.getElementById(c[2]).textContent=l.length+" videos";
 });
 var R=[
 ["Mellow Rackz x NBA (Never Broke Again)","ig","DdmiwVBBwJg"],
@@ -89,7 +90,7 @@ var R=[
 ["Ragey","ig","DQ6ltfbjaWG"],
 ["J4yson","tt","7634938982907907361","j4ysonmusic"]
 ];
-// All reels: thumbnail in thumbs/<id>.jpg (id = reel- of videonummer)
+// Reels: thumbnail in thumbs/<id>.jpg (id = reel or video number)
 function ru(r){return r[1]==="ig"?"https://www.instagram.com/reel/"+r[2]+"/":"https://www.tiktok.com/@"+r[3]+"/video/"+r[2]}
 (function(){
  var names=[];R.forEach(function(r){if(names.indexOf(r[0])<0)names.push(r[0])});
@@ -100,11 +101,20 @@ function ru(r){return r[1]==="ig"?"https://www.instagram.com/reel/"+r[2]+"/":"ht
    var same=l.filter(function(x,j){return x[1]===r[1]});
    var nr=l.filter(function(x,j){return x[1]===r[1]&&j<=i}).length;
    var title=l.length>1?n+" ("+p+(same.length>1?" "+nr:"")+")":n;
-   return '<a class="card" href="'+ru(r)+'" target="_blank" rel="noopener"><div class="frame"><span class="badge" aria-hidden="true">4</span><span>'+esc(title)+'</span><img loading="lazy" alt="" src="thumbs/'+r[2]+'.jpg" onerror="this.remove()"></div><div class="info"><h3>'+esc(title)+'</h3><span class="go">Bekijk op '+p+'</span></div></a>';
+   return '<a class="card" href="'+ru(r)+'" target="_blank" rel="noopener"><div class="frame"><span class="badge" aria-hidden="true">4</span><span>'+esc(title)+'</span><img loading="lazy" alt="" src="thumbs/'+r[2]+'.jpg" onerror="this.remove()"></div><div class="info"><h3>'+esc(title)+'</h3><span class="go">Watch on '+p+'</span></div></a>';
   }).join("");
   return '<h3 class="artist">'+esc(n)+'<small>'+l.length+(l.length>1?" reels":" reel")+'</small></h3><div class="grid">'+cards+'</div>';
  }).join("");
  document.getElementById("c4").textContent=R.length+" reels";
+})();
+// Projects: [title, [lines under the title], link (empty = no link), thumbnail name in thumbs/, winner?]
+var P=[["WdKA 48 Hour Project 2026",["DOP, Assistant Editor, Colour Graded","Willem de Kooning Academy"],"","wdka-48-hour",true]];
+(function(){
+ document.getElementById("g5").innerHTML=P.map(function(p){
+  var inner='<div class="frame"><span class="badge" aria-hidden="true">5</span>'+(p[4]?'<span class="win">Winner</span>':'')+'<span>'+esc(p[0])+'</span><img loading="lazy" alt="" src="thumbs/'+p[3]+'.jpg" onerror="this.remove()"></div><div class="info"><h3>'+esc(p[0])+'</h3>'+p[1].map(function(x){return '<p class="full">'+esc(x)+'</p>'}).join("")+(p[2]?'<span class="go">View project</span>':'')+'</div>';
+  return p[2]?'<a class="card" href="'+p[2]+'" target="_blank" rel="noopener">'+inner+'</a>':'<div class="card">'+inner+'</div>';
+ }).join("");
+ document.getElementById("c5").textContent=P.length+(P.length>1?" projects":" project");
 })();
 document.getElementById("tt").innerHTML=T.map(function(id,i){return '<li><a href="https://www.tiktok.com/@augke/video/'+id+'" target="_blank" rel="noopener">TikTok '+(i+1)+'</a></li>'}).join("");
 </script>
